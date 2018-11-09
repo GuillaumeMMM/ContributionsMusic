@@ -1,0 +1,5 @@
+<div class="contribution-container">
+  <div id="chart-wrapper"></div>
+  <button class="btn" (click)="onGetMusic()" *ngIf="contributions.contributions">Music!</button>
+  <button class="btn btn-error" (click)="onStopMusic()" *ngIf="contributions.contributions && readingMusic">Stop!</button>
+</div>

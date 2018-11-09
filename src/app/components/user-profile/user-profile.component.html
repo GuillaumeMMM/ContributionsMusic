@@ -1,0 +1,17 @@
+<div class="user-profile-container" *ngIf="user.login">
+  <div class="avatar-container">
+    <img [src]="user.avatar_url">
+  </div>
+  <div class="user-description">
+    <div class="description-name" *ngIf="user.name">
+      <p>{{user.name}} <mark><a [href]="user.html_url">{{user.login}}</a></mark> <i>{{user.company}}</i></p>
+    </div>
+    <div class="description-name" *ngIf="!user.name">
+      <p><mark><a [href]="user.html_url">{{user.login}}</a></mark> <i>{{user.company}}</i></p>
+    </div>
+    <div class="description-bio">
+      <p>{{user.bio}}</p>
+    </div>
+  </div>
+</div>
+<div class="loading loading-lg" *ngIf="!user.login && request"></div>

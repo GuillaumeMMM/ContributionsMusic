@@ -1,0 +1,12 @@
+<div class="home-container">
+  <div class="user-input-container">
+      <app-user-input (handleUserDataChange)="onUserDataChange($event)" (handleRequestData)="onRequestData()" (handleUserContributionsChange)="onUserContributionsChange($event)"></app-user-input>
+  </div>
+
+  <div class="user-profile-container">
+    <app-user-profile [user]="userData" [request]="requestData"></app-user-profile>
+  </div>
+  <div class="user-contributions-container">
+    <app-contributions [contributions]="userContributions" [request]="requestData"></app-contributions>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.user-profile-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .avatar-container {
+        width: 20vh;
+        height: 20vh;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 100%;
+        }
+    }
+
+    .user-description {
+        height: 100%;
+        width: calc(100% - 20vh);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .description-name {
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .description-bio {
+            flex: 1;
+            padding-left: 20px;
+        }
+    }
+}
